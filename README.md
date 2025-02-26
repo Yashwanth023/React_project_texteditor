@@ -1,69 +1,142 @@
-# Welcome to your Lovable project
 
-## Project info
+# Nexus Flow
 
-**URL**: https://lovable.dev/projects/7ac141ff-2f85-4f9d-9e3a-0dc0dfd2bf07
+A modern web application built with React and TypeScript, featuring a beautiful UI and comprehensive functionality.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+### Authentication & User Management
+- Secure login and signup system
+- Protected routes and authenticated sessions
+- User profile management
 
-**Use Lovable**
+### Interactive Dashboard
+- Dynamic data visualization with multiple chart types:
+  - Line charts
+  - Bar charts
+  - Pie charts
+- Real-time data updates
+- User activity tracking
+- Beautiful gradient backgrounds
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7ac141ff-2f85-4f9d-9e3a-0dc0dfd2bf07) and start prompting.
+### Responsive Design
+- Mobile-first approach
+- Intuitive mobile navigation with slide-out menu
+- Responsive layouts for all screen sizes
+- Glass-morphism effects
 
-Changes made via Lovable will be committed automatically to this repo.
+### Theme System
+- Light and dark mode support
+- System theme detection
+- Persistent theme preferences
+- Smooth theme transitions
 
-**Use your preferred IDE**
+### Modern UI Components
+- Interactive counter with history tracking
+- Dynamic form handling with validation
+- Rich text editor with formatting options
+- Toast notifications
+- Dropdown menus
+- Modal dialogs
+- Beautiful gradient backgrounds
+- Custom button styles with hover effects
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Technical Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Core Technologies
+- React 18
+- TypeScript
+- Vite
+- React Router DOM
 
-Follow these steps:
+### UI & Styling
+- Tailwind CSS
+- shadcn/ui components
+- Lucide React icons
+- Custom gradient effects
+- Glass-morphism design
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Data Visualization
+- Recharts for interactive charts
+- Dynamic chart type switching
+- Real-time data updates
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### State Management & Data Fetching
+- React Query (TanStack Query)
+- React Context for global state
+- Local storage persistence
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Development Tools
+- TypeScript for type safety
+- ESLint for code quality
+- Modern module bundling with Vite
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Getting Started
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+3. Build for production:
+```bash
+npm run build
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Route components
+├── providers/     # Context providers
+├── hooks/         # Custom React hooks
+└── lib/          # Utility functions
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Browser Support
 
-## What technologies are used for this project?
+The application is tested and supported in:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-This project is built with .
+## Performance
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Optimized bundle size
+- Lazy loading for routes
+- Responsive image loading
+- Efficient state management
+- Minimal re-renders
 
-## How can I deploy this project?
+## Security Features
 
-Simply open [Lovable](https://lovable.dev/projects/7ac141ff-2f85-4f9d-9e3a-0dc0dfd2bf07) and click on Share -> Publish.
+- Protected routes
+- Secure authentication flow
+- Input validation
+- XSS protection
 
-## I want to use a custom domain - is that possible?
+## Accessibility
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- ARIA attributes
+- Keyboard navigation
+- Screen reader support
+- High contrast mode support
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
