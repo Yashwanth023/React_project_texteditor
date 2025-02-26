@@ -28,8 +28,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex min-h-[80vh] items-center justify-center">
-      <Card className="w-full max-w-md">
+    <div className="flex min-h-[80vh] items-center justify-center bg-gradient-to-br from-purple-500/20 to-purple-700/30 via-purple-600/25">
+      <Card className="w-full max-w-md backdrop-blur-sm bg-white/90">
         <CardHeader>
           <CardTitle>{isLogin ? "Welcome back" : "Create an account"}</CardTitle>
           <CardDescription>
