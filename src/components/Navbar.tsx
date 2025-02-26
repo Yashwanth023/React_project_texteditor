@@ -9,11 +9,24 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Sun, Moon, Laptop, Sparkles } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Sun, Moon, Laptop, Sparkles, Menu } from "lucide-react";
+import { useState } from "react";
 
 const Navbar = () => {
   const { isAuthenticated, logout } = useAuth();
   const { setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavigate = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -31,32 +44,81 @@ const Navbar = () => {
           </div>
 
           {isAuthenticated && (
-            <div className="hidden md:flex items-center space-x-6">
-              <Link
-                to="/"
-                className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
-              >
-                Dashboard
-              </Link>
-              <Link
-                to="/counter"
-                className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
-              >
-                Counter
-              </Link>
-              <Link
-                to="/user-form"
-                className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
-              >
-                User Form
-              </Link>
-              <Link
-                to="/text-editor"
-                className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
-              >
-                Text Editor
-              </Link>
-            </div>
+            <>
+              {/* Desktop Navigation */}
+              <div className="hidden md:flex items-center space-x-6">
+                <Link
+                  to="/"
+                  className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
+                >
+                  Dashboard
+                </Link>
+                <Link
+                  to="/counter"
+                  className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
+                >
+                  Counter
+                </Link>
+                <Link
+                  to="/user-form"
+                  className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
+                >
+                  User Form
+                </Link>
+                <Link
+                  to="/text-editor"
+                  className="text-sm hover:text-primary transition-colors px-3 py-1.5 rounded-md border border-transparent hover:border-primary/20"
+                >
+                  Text Editor
+                </Link>
+              </div>
+
+              {/* Mobile Navigation */}
+              <div className="md:hidden">
+                <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                  <SheetTrigger asChild>
+                    <Button variant="outline" size="icon" className="size-9">
+                      <Menu className="size-5" />
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent>
+                    <SheetHeader>
+                      <SheetTitle>Menu</SheetTitle>
+                    </SheetHeader>
+                    <div className="flex flex-col space-y-4 mt-4">
+                      <Link
+                        to="/"
+                        onClick={handleNavigate}
+                        className="text-sm hover:text-primary transition-colors px-3 py-2 rounded-md border border-transparent hover:border-primary/20"
+                      >
+                        Dashboard
+                      </Link>
+                      <Link
+                        to="/counter"
+                        onClick={handleNavigate}
+                        className="text-sm hover:text-primary transition-colors px-3 py-2 rounded-md border border-transparent hover:border-primary/20"
+                      >
+                        Counter
+                      </Link>
+                      <Link
+                        to="/user-form"
+                        onClick={handleNavigate}
+                        className="text-sm hover:text-primary transition-colors px-3 py-2 rounded-md border border-transparent hover:border-primary/20"
+                      >
+                        User Form
+                      </Link>
+                      <Link
+                        to="/text-editor"
+                        onClick={handleNavigate}
+                        className="text-sm hover:text-primary transition-colors px-3 py-2 rounded-md border border-transparent hover:border-primary/20"
+                      >
+                        Text Editor
+                      </Link>
+                    </div>
+                  </SheetContent>
+                </Sheet>
+              </div>
+            </>
           )}
 
           <div className="flex items-center space-x-4">
